@@ -20,27 +20,35 @@ body{
 }
 
 .header{
-    padding-top: 50px;
+    padding-top: 34px;
     display: flex;
     justify-content: space-between;
 }
-
 .menu{
     display: flex;
-    list-style-type: none;
-    gap: 30px;
     align-items: center;
-    &__list a{ 
+    &__list{
+        display: flex;
+        list-style-type: none;
+        gap: 10px;
+        // align-items: center;
+    }
+    &__link{ 
         color: rgb(255, 255, 255);
         font-size: 24px;
         font-weight: 400;
         line-height: 28px;
         text-decoration: none;
+        padding: 5px 10px;
+        transition: .3s;
+        border-bottom: 2px solid transparent;
         &:hover{
-            text-decoration: underline;
+            border-bottom: 2px solid orange;
         }
     }
+
 }
+
 
 .slick-slider{
     padding-top: 130px;
@@ -60,14 +68,18 @@ body{
     }
 }
 
-.slick-dots li{
-    margin-left: 15px;
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
 }
-
+.slick-dots li.slick-active button{
+    background: #d95108;
+}
 
 .slick-dots li button{
     display: block;
-    margin-left: 25px;
     border-radius: 50px;
     font-size: 0;
     border: none;
@@ -76,15 +88,5 @@ body{
     height: 25px;
     background: #7A3D1C;
     border: 2px solid #FDD486; 
+    cursor: pointer;
 }
-    
-    
-
-.slick-dots li button:before {
-   font-size: 0; 
-}
-    
-
-
-
-
